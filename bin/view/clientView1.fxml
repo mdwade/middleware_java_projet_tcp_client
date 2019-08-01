@@ -1,0 +1,367 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXTextField?>
+<?import com.jfoenix.controls.JFXComboBox?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.layout.StackPane?>
+<?import javafx.scene.shape.Line?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane prefHeight="605.0" prefWidth="915.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.ClientViewController1">
+   <children>
+      <Pane prefHeight="638.0" prefWidth="912.0" style="-fx-background-color: white;">
+         <children>
+            <Pane layoutX="-32.0" prefHeight="645.0" prefWidth="268.0" style="-fx-background-color: #292929;">
+               <children>
+                  <Button fx:id="btn" layoutX="47.0" layoutY="163.0" mnemonicParsing="false" onAction="#showAddAdminPane" prefHeight="38.0" prefWidth="208.0" style="-fx-background-color: #292927; -fx-border-color: black;" text="Ajouter" textFill="WHITE" />
+                  <Text fill="WHITE" layoutX="46.0" layoutY="147.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Gestion Admins">
+                     <font>
+                        <Font size="18.0" />
+                     </font>
+                  </Text>
+                  <Text fill="WHITE" layoutX="60.0" layoutY="42.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Parc">
+                     <font>
+                        <Font size="26.0" />
+                     </font>
+                  </Text>
+                  <Text fill="WHITE" layoutX="60.0" layoutY="78.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Informatique">
+                     <font>
+                        <Font size="26.0" />
+                     </font>
+                  </Text>
+                  <Line endX="100.0" layoutX="146.0" layoutY="96.0" startX="-100.0" />
+                  <Text fill="WHITE" layoutX="47.0" layoutY="307.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Gestion Serveurs">
+                     <font>
+                        <Font size="18.0" />
+                     </font>
+                  </Text>
+                  <Text fill="WHITE" layoutX="47.0" layoutY="457.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Gestion Salles">
+                     <font>
+                        <Font size="18.0" />
+                     </font>
+                  </Text>
+                  <Button layoutX="47.0" layoutY="213.0" mnemonicParsing="false" onAction="#showListAdminPane" prefHeight="38.0" prefWidth="208.0" style="-fx-background-color: #292927; -fx-border-color: black;" text="Lister" textFill="WHITE" />
+                  <ImageView fitHeight="20.0" fitWidth="19.0" layoutX="104.0" layoutY="173.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../../../../Users/HP/Downloads/add%20(2).png" />
+                     </image>
+                  </ImageView>
+                  <ImageView fitHeight="20.0" fitWidth="19.0" layoutX="104.0" layoutY="223.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../../../../Users/HP/Downloads/search.png" />
+                     </image>
+                  </ImageView>
+                  <Button layoutX="46.0" layoutY="322.0" mnemonicParsing="false" onAction="#showAddServerPane" prefHeight="38.0" prefWidth="208.0" style="-fx-background-color: #292927; -fx-border-color: black;" text="Ajouter" textFill="WHITE" />
+                  <Button layoutX="46.0" layoutY="372.0" mnemonicParsing="false" onAction="#showListServerPane" prefHeight="38.0" prefWidth="208.0" style="-fx-background-color: #292927; -fx-border-color: black;" text="Lister" textFill="WHITE" />
+                  <ImageView fitHeight="20.0" fitWidth="19.0" layoutX="104.0" layoutY="332.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../../../../Users/HP/Downloads/add%20(2).png" />
+                     </image>
+                  </ImageView>
+                  <ImageView fitHeight="20.0" fitWidth="19.0" layoutX="104.0" layoutY="382.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../../../../Users/HP/Downloads/search.png" />
+                     </image>
+                  </ImageView>
+                  <Button layoutX="46.0" layoutY="472.0" mnemonicParsing="false" onAction="#showAddSallePane" prefHeight="38.0" prefWidth="208.0" style="-fx-background-color: #292927; -fx-border-color: black;" text="Ajouter / Lister" textFill="WHITE" />
+                  <ImageView fitHeight="12.0" fitWidth="19.0" layoutX="54.0" layoutY="479.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../../../../Users/HP/Downloads/add%20(2).png" />
+                     </image>
+                  </ImageView>
+                  <ImageView fitHeight="19.0" fitWidth="12.0" layoutX="78.0" layoutY="491.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../../../../Users/HP/Downloads/search.png" />
+                     </image>
+                  </ImageView>
+               </children>
+            </Pane>
+            <StackPane fx:id="stackPane" layoutX="285.0" layoutY="63.0" prefHeight="529.0" prefWidth="584.0" style="-fx-border-color: grey; -fx-border-radius: 20px;">
+               <children>
+               
+               
+               	  <Pane fx:id="addAdminRegion" prefHeight="200.0" prefWidth="200.0">
+                     <children>
+                        <Text layoutX="80.0" layoutY="76.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Ajouter un">
+                           <font>
+                              <Font size="24.0" />
+                           </font>
+                        </Text>
+                        <Text layoutX="80.0" layoutY="111.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Administrateur">
+                           <font>
+                              <Font size="24.0" />
+                           </font>
+                        </Text>
+                        <Line endX="100.0" layoutX="181.0" layoutY="133.0" opacity="0.16" startX="-100.0" stroke="#292929" />
+                        <JFXTextField fx:id="adminLastName" layoutX="219.0" layoutY="185.0" prefHeight="32.0" prefWidth="245.0" />
+                        <Text layoutX="122.0" layoutY="221.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Nom :">
+                           <font>
+                              <Font size="18.0" />
+                           </font>
+                        </Text>
+                        <JFXTextField fx:id="adminFirstName" layoutX="219.0" layoutY="264.0" prefHeight="32.0" prefWidth="245.0" />
+                        <Text layoutX="122.0" layoutY="300.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Prénom :">
+                           <font>
+                              <Font size="18.0" />
+                           </font>
+                        </Text>
+                        <JFXTextField fx:id="adminPseudo" layoutX="217.0" layoutY="337.0" prefHeight="32.0" prefWidth="245.0" />
+                        <Text layoutX="120.0" layoutY="373.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Pseudo :">
+                           <font>
+                              <Font size="18.0" />
+                           </font>
+                        </Text>
+                        <Button fx:id="btnAddAmin" layoutX="301.0" layoutY="432.0" mnemonicParsing="false" onAction="#addAdmin" prefHeight="38.0" prefWidth="78.0" style="-fx-background-color: green;" text="Valider" textFill="WHITE">
+                           <font>
+                              <Font size="14.0" />
+                           </font>
+                        </Button>
+                        <ImageView fitHeight="96.0" fitWidth="97.0" layoutX="414.0" layoutY="34.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../../../../Users/HP/Downloads/admin.png" />
+                           </image>
+                        </ImageView>
+                     </children>
+                  </Pane>
+                  <fx:define>
+                  <Pane fx:id="addServerRegion" prefHeight="200.0" prefWidth="200.0">
+                     <children>
+                        <Text layoutX="59.0" layoutY="60.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Ajouter">
+                           <font>
+                              <Font size="24.0" />
+                           </font>
+                        </Text>
+                        <Text layoutX="58.0" layoutY="100.0" strokeType="OUTSIDE" strokeWidth="0.0" text="un serveur">
+                           <font>
+                              <Font size="24.0" />
+                           </font>
+                        </Text>
+                        <Line endX="100.0" layoutX="159.0" layoutY="127.0" startX="-100.0" stroke="#d2d2d2" />
+                        <ImageView fitHeight="105.0" fitWidth="96.0" layoutX="439.0" layoutY="26.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../../../../Users/HP/Downloads/database.png" />
+                           </image>
+                        </ImageView>
+                        <JFXTextField fx:id="serverNumber" layoutX="240.0" layoutY="195.0" prefHeight="25.0" prefWidth="181.0" />
+                        <JFXTextField fx:id="serverName" layoutX="240.0" layoutY="266.0" prefHeight="25.0" prefWidth="181.0" />
+                        <JFXComboBox fx:id="salleName" layoutX="240.0" layoutY="344.0" prefHeight="25.0" prefWidth="181.0" />
+                        <JFXComboBox fx:id="adminServerPseudo" layoutX="240.0" layoutY="410.0" prefHeight="25.0" prefWidth="181.0" />
+                        <Button fx:id="btnAddServer" layoutX="292.0" layoutY="468.0" mnemonicParsing="false" onAction="#addServer" prefHeight="38.0" prefWidth="78.0" style="-fx-background-color: green;" text="Valider" textFill="WHITE">
+                           <font>
+                              <Font size="14.0" />
+                           </font>
+                        </Button>
+                        <Text layoutX="98.0" layoutY="219.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Numéro :">
+                           <font>
+                              <Font size="18.0" />
+                           </font>
+                        </Text>
+                        <Text layoutX="98.0" layoutY="292.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Nom :">
+                           <font>
+                              <Font size="18.0" />
+                           </font>
+                        </Text>
+                        <Text layoutX="98.0" layoutY="370.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Salle :">
+                           <font>
+                              <Font size="18.0" />
+                           </font>
+                        </Text>
+                        <Text layoutX="98.0" layoutY="436.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Admin :">
+                           <font>
+                              <Font size="18.0" />
+                           </font>
+                        </Text>
+                     </children>
+                  </Pane>
+                                                	
+                  <Pane fx:id="listAdminRegion" layoutX="11.0" layoutY="11.0" prefHeight="200.0" prefWidth="200.0">
+                     <children>
+                        <Text layoutX="80.0" layoutY="76.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Liste des">
+                           <font>
+                              <Font size="24.0" />
+                           </font>
+                        </Text>
+                        <Text layoutX="80.0" layoutY="111.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Administrateurs">
+                           <font>
+                              <Font size="24.0" />
+                           </font>
+                        </Text>
+                        <Line endX="100.0" layoutX="181.0" layoutY="133.0" opacity="0.16" startX="-100.0" stroke="#292929" />
+                        <ImageView fitHeight="96.0" fitWidth="97.0" layoutX="414.0" layoutY="34.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../../../../Users/HP/Downloads/checklist.png" />
+                           </image>
+                        </ImageView>
+                        <Pane layoutX="23.0" layoutY="148.0" prefHeight="323.0" prefWidth="536.0">
+                           <children>
+                              <TableView fx:id="adminListTable" prefHeight="323.0" prefWidth="536.0">
+                                <columns>
+                                  <TableColumn fx:id="adminIDColumn" prefWidth="75.0" text="ID" />
+                                  <TableColumn fx:id="adminPseudoColumn" prefWidth="75.0" text="Pseudo" />
+                                    <TableColumn fx:id="adminLastNameColumn" prefWidth="75.0" text="Nom" />
+                                    <TableColumn fx:id="adminFirstNameColumn" prefWidth="75.0" text="Prénom" />
+                                </columns>
+                                 <columnResizePolicy>
+                                    <TableView fx:constant="CONSTRAINED_RESIZE_POLICY" />
+                                 </columnResizePolicy>
+                              </TableView>
+                           </children>
+                        </Pane>
+                        <Button fx:id="removeAdminBtn" layoutX="478.0" layoutY="482.0" mnemonicParsing="false" onAction="#removeAdmin" prefHeight="38.0" prefWidth="67.0" style="-fx-background-color: white; -fx-border-color: #292929;" textFill="WHITE" />
+                        <ImageView fitHeight="20.0" fitWidth="19.0" layoutX="502.0" layoutY="492.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../../../../Users/HP/Downloads/delete.png" />
+                           </image>
+                        </ImageView>
+                        <Button fx:id="updateAdminBtn" layoutX="403.0" layoutY="483.0" mnemonicParsing="false" onAction="#updateAdmin" prefHeight="38.0" prefWidth="67.0" style="-fx-background-color: white; -fx-border-color: #292927;" textFill="WHITE" />
+                        <ImageView fitHeight="20.0" fitWidth="19.0" layoutX="427.0" layoutY="493.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../../../../Users/HP/Downloads/reload.png" />
+                           </image>
+                        </ImageView>
+                        <JFXComboBox layoutX="104.0" layoutY="480.0" prefHeight="25.0" prefWidth="90.0" />
+                        <Text layoutX="31.0" layoutY="498.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Filtrer par :">
+                           <font>
+                              <Font size="14.0" />
+                           </font>
+                        </Text>
+                        <JFXTextField layoutX="282.0" layoutY="481.0" prefHeight="25.0" prefWidth="91.0" />
+                        <Text layoutX="221.0" layoutY="499.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Valeurs :">
+                           <font>
+                              <Font size="14.0" />
+                           </font>
+                        </Text>
+          	          </children>
+          	        </Pane>
+                  
+                  <Pane fx:id="listServerRegion" layoutX="11.0" layoutY="11.0" prefHeight="200.0" prefWidth="200.0">
+                     <children>
+                        <Text layoutX="80.0" layoutY="76.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Liste des">
+                           <font>
+                              <Font size="24.0" />
+                           </font>
+                        </Text>
+                        <Text layoutX="80.0" layoutY="111.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Serveurs">
+                           <font>
+                              <Font size="24.0" />
+                           </font>
+                        </Text>
+                        <Line endX="100.0" layoutX="181.0" layoutY="133.0" opacity="0.16" startX="-100.0" stroke="#292929" />
+                        <ImageView fitHeight="96.0" fitWidth="97.0" layoutX="414.0" layoutY="34.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../../../../Users/HP/Downloads/checklist.png" />
+                           </image>
+                        </ImageView>
+                        <Pane layoutX="23.0" layoutY="148.0" prefHeight="323.0" prefWidth="536.0">
+                           <children>
+                              <TableView fx:id="serverListTable" prefHeight="323.0" prefWidth="536.0">
+                                 <columns>
+                                    <TableColumn fx:id="serverNumberColumn" prefWidth="75.0" text="Numéro" />
+                                    <TableColumn fx:id="serverNameColumn" prefWidth="75.0" text="Nom" />
+                                    <TableColumn fx:id="salleNameColumn" prefWidth="75.0" text="Salle" />
+                                    <TableColumn fx:id="adminServerPseudoColumn" prefWidth="75.0" text="Pseudo Admin" />
+                                 </columns>
+                                 <columnResizePolicy>
+                                    <TableView fx:constant="CONSTRAINED_RESIZE_POLICY" />
+                                 </columnResizePolicy>
+                              </TableView>
+                           </children>
+                        </Pane>
+                        <Button fx:id="removeServerBtn" layoutX="490.0" layoutY="480.0" mnemonicParsing="false" onAction="#removeServer" prefHeight="38.0" prefWidth="67.0" style="-fx-background-color: white; -fx-border-color: #292929;" textFill="WHITE" />
+                        <ImageView fitHeight="20.0" fitWidth="19.0" layoutX="514.0" layoutY="490.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../../../../Users/HP/Downloads/delete.png" />
+                           </image>
+                        </ImageView>
+                        <Button fx:id="updateServerBtn" layoutX="414.0" layoutY="481.0" mnemonicParsing="false" onAction="#updateServer" prefHeight="38.0" prefWidth="67.0" style="-fx-background-color: white; -fx-border-color: #292927;" textFill="WHITE" />
+                        <ImageView fitHeight="20.0" fitWidth="19.0" layoutX="438.0" layoutY="491.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../../../../Users/HP/Downloads/reload.png" />
+                           </image>
+                        </ImageView>
+                        <JFXComboBox layoutX="98.0" layoutY="487.0" prefHeight="25.0" prefWidth="90.0" />
+                        <Text layoutX="23.0" layoutY="504.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Filtrer par :">
+                           <font>
+                              <Font size="14.0" />
+                           </font>
+                        </Text>
+                        <JFXTextField layoutX="272.0" layoutY="487.0" prefHeight="25.0" prefWidth="91.0" />
+                        <Text layoutX="212.0" layoutY="506.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Valeurs :">
+                           <font>
+                              <Font size="14.0" />
+                           </font>
+                        </Text>
+                     </children>
+                  </Pane>
+                  
+                  <Pane fx:id="salleRegion" prefHeight="200.0" prefWidth="200.0">
+                     <children>
+                        <Text layoutX="76.0" layoutY="45.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Ajouter un salle">
+                           <font>
+                              <Font size="18.0" />
+                           </font>
+                        </Text>
+                        <Text layoutX="76.0" layoutY="224.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Liste des salles">
+                           <font>
+                              <Font size="18.0" />
+                           </font>
+                        </Text>
+                        <Line endX="100.0" layoutX="134.0" layoutY="64.0" startX="-100.0" />
+                        <Line endX="100.0" layoutX="134.0" layoutY="240.0" startX="-100.0" />
+                        <ImageView fitHeight="35.0" fitWidth="36.0" layoutX="33.0" layoutY="200.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../../../../Users/HP/Downloads/entrance.png" />
+                           </image>
+                        </ImageView>
+                        <JFXTextField fx:id="salleNumber" layoutX="110.0" layoutY="97.0" />
+                        <JFXTextField fx:id="salleNames" layoutX="351.0" layoutY="96.0" />
+                        <Button fx:id="btnAddSalle" layoutX="256.0" layoutY="143.0" mnemonicParsing="false" onAction="#addSalle" prefHeight="32.0" prefWidth="58.0" style="-fx-background-color: green;" text="Valider" textFill="WHITE" />
+                        <Text layoutX="39.0" layoutY="115.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Numéro :">
+                           <font>
+                              <Font size="14.0" />
+                           </font>
+                        </Text>
+                        <Text layoutX="291.0" layoutY="114.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Nom :">
+                           <font>
+                              <Font size="14.0" />
+                           </font>
+                        </Text>
+                        <ImageView fitHeight="35.0" fitWidth="36.0" layoutX="33.0" layoutY="21.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../../../../Users/HP/Downloads/entrance.png" />
+                           </image>
+                        </ImageView>
+                        <Pane layoutX="33.0" layoutY="257.0" prefHeight="240.0" prefWidth="514.0">
+                           <children>
+                              <TableView fx:id="sallesListTable" prefHeight="240.0" prefWidth="514.0">
+                                <columns>
+                                  <TableColumn fx:id="sallesNumberColumn" prefWidth="75.0" text="Numéro de salle" />
+                                  <TableColumn fx:id="sallesNameColumn" prefWidth="75.0" text="Nom" />
+                                </columns>
+                                 <columnResizePolicy>
+                                    <TableView fx:constant="CONSTRAINED_RESIZE_POLICY" />
+                                 </columnResizePolicy>
+                              </TableView>
+                           </children>
+                        </Pane>
+                     </children>
+                  </Pane>
+		          </fx:define>
+		                             
+               </children>
+            </StackPane>
+            <Button layoutX="851.0" layoutY="14.0" mnemonicParsing="false" onAction="#closeClient" prefHeight="35.0" prefWidth="36.0" style="-fx-background-color: red;" text="X" textFill="WHITE">
+               <font>
+                  <Font size="14.0" />
+               </font></Button>
+         </children>
+      </Pane>
+   </children>
+</AnchorPane>
